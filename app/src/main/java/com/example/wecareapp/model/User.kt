@@ -3,7 +3,7 @@ package com.example.wecareapp.model
 data class User (
     val Email: String,
     val Password: String,
-    )
+)
 data class UserResponse(
     val nameid: String,
     val email: String,
@@ -13,4 +13,8 @@ data class UserResponse(
     val nbf: Int,
     val exp: Int,
     val iat: Int
-    )
+)
+
+data class UserList(
+    val data: List<User>
+)

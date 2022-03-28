@@ -58,7 +58,7 @@
             <View
                 android:id="@+id/login_box"
                 android:layout_width="343dp"
-                android:layout_height="430dp"
+                android:layout_height="480dp"
                 android:layout_gravity="center"
 
                 android:background="@drawable/color"
@@ -67,7 +67,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
 
@@ -87,34 +88,32 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.005" />
 
+
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:id="@+id/ti_apellidos"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="281dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/login_box"
-                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintHorizontal_bias="0.474"
                 app:layout_constraintStart_toStartOf="@+id/login_box"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.500">
+                app:layout_constraintVertical_bias="0.375">
 
                 <AutoCompleteTextView
                     android:id="@+id/tv_apellido"
                     android:layout_width="278dp"
-                    android:textSize="16dp"
-                    android:text=""
                     android:layout_height="51dp"
-                    android:hint="Apellidos" />
+                    android:hint="Apellidos"
+                    android:text=""
+                    android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:id="@+id/ti_correo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="281dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -123,15 +122,15 @@
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="@+id/login_box"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.715">
+                app:layout_constraintVertical_bias="0.566">
 
                 <AutoCompleteTextView
                     android:id="@+id/tv_correo"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:textSize="16dp"
+                    android:hint="Correo"
                     android:text=""
-                    android:hint="Correo" />
+                    android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -145,21 +144,46 @@
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="@+id/login_box"
                 app:layout_constraintTop_toTopOf="parent"
+                app:passwordToggleEnabled="true"
                 app:layout_constraintVertical_bias="0.925">
 
                 <AutoCompleteTextView
-                    android:id="@+id/tv_contraseña"
+                    android:id="@+id/tv_contraseña_confirmar"
                     android:layout_width="278dp"
                     android:textSize="16dp"
-                    android:text=""
+                    android:inputType="textPassword"
                     android:layout_height="51dp"
-                    android:hint="Contraseña"></AutoCompleteTextView>
+                    android:hint="Confirmar Contraseña"></AutoCompleteTextView>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_confirm_contra"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/login_box"
+                app:layout_constraintHorizontal_bias="0.474"
+                app:layout_constraintStart_toStartOf="@+id/login_box"
+                app:layout_constraintTop_toTopOf="parent"
+                app:passwordToggleEnabled="true"
+                app:layout_constraintVertical_bias="0.746">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tv_contraseña"
+                    android:layout_width="278dp"
+                    android:layout_height="51dp"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:textSize="16dp"></AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ti_nombre"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="281dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -168,15 +192,15 @@
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="@+id/login_box"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.275">
+                app:layout_constraintVertical_bias="0.198">
 
                 <AutoCompleteTextView
                     android:id="@+id/tv_nombre"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:textSize="16dp"
+                    android:hint="Nombres"
                     android:text=""
-                    android:hint="Nombres" />
+                    android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -186,7 +210,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             >
 
