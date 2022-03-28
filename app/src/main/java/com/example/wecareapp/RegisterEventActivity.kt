@@ -3,6 +3,7 @@ package com.example.wecareapp
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -18,7 +19,6 @@ import java.util.*
 
 class RegisterEventActivity : AppCompatActivity() {
     lateinit var viewModel: CreateEventVM
-
     @RequiresApi(Build.VERSION_CODES.O)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,9 @@ class RegisterEventActivity : AppCompatActivity() {
 
 
         var feelingM = findViewById<SeekBar>(R.id.feelingM)
-
+        var et_event = findViewById<EditText>(R.id.eT_Event)
+        var et_reason = findViewById<EditText>(R.id.eT_reasonevent)
+        var tv_details = findViewById<AutoCompleteTextView>(R.id.tv_detail_event)
         var ib_tup = findViewById<ImageButton>(R.id.ib_tup)
         var ib_tdown = findViewById<ImageButton>(R.id.ib_tdown)
         var feeling_numberM = findViewById<TextView>(R.id.feeling_numberM)
@@ -55,9 +57,26 @@ class RegisterEventActivity : AppCompatActivity() {
 
 
 
-        ib_sendevent.setOnClickListener(View.OnClickListener {
-            createEvent(this, feelingNum, result,)
-        })
+        ib_sendevent.setOnClickListener{
+            if(TextUtils.isEmpty(et_event.text.toString())){
+                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                createEvent(this, feelingNum, result,)
+            }
+            if(TextUtils.isEmpty(et_reason.text.toString())){
+                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                createEvent(this, feelingNum, result,)
+            }
+            if(TextUtils.isEmpty(tv_details.text.toString())){
+                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                createEvent(this, feelingNum, result,)
+            }
+        }
 
 /*
         "eventName": "string",
@@ -105,8 +124,6 @@ class RegisterEventActivity : AppCompatActivity() {
             result = "Mal"
 
         })
-
-
     }
 
     private fun createEvent(con: Context, feelingNum: Float, result: String) {
