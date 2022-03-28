@@ -1,12 +1,13 @@
 package com.example.wecareapp.model
 
-data class Specialist (
+data class Specialist(
     val Firstname: String,
     val Lastname: String,
     val Email: String,
     val Password: String,
-    val Area :String,
-    val TuitionNumber :String,
+    val Area: String,
+    val TuitionNumber: String,
+    val ConfirmPassword: String,
 )
 
 data class SpecialistResponse(
