@@ -1,11 +1,13 @@
 package com.example.wecareapp
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +31,7 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -45,10 +48,22 @@ class HomeFragment : Fragment() {
     fun Addevent(view:View) {
         var add_event=view.findViewById<ImageButton>(R.id.ib_addevent)
         add_event.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this@HomeFragment.requireContext(), RegisterEventActivity::class.java).apply {
-                //putExtra("Username",user.name)
+            val builder = AlertDialog.Builder(this@HomeFragment.requireContext())
+            val view = layoutInflater.inflate(R.layout.dialog_home, null)
+            builder.setView(view)
+            val dialog = builder.create()
+            dialog.show()
+
+            view.findViewById<Button>(R.id.button2).setOnClickListener{
+                val intent = Intent(this@HomeFragment.requireContext(), RegisterEventActivity::class.java).apply {
+                    //putExtra("Username",user.name)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
+            view.findViewById<Button>(R.id.button).setOnClickListener{
+                dialog.hide()
+            }
+
         })
     }
 
