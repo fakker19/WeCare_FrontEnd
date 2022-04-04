@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -74,13 +74,15 @@
                     android:id="@+id/v_alegre"
                     android:layout_width="174dp"
                     android:layout_height="154dp"
-                    android:layout_marginLeft="20dp"
 
 
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:background="#FFF"
+                    app:layout_constraintBottom_toTopOf="@+id/v_ansioso"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <View
                     android:id="@+id/v_alegre10"
@@ -88,10 +90,12 @@
                     android:layout_height="154dp"
 
 
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
                     android:background="#FFF"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/v_alegre"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <View
@@ -100,20 +104,8 @@
                     android:layout_height="154dp"
 
 
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="192dp"
-                    android:background="#FFF"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/v_asco"
-                    android:layout_width="174dp"
-                    android:layout_height="154dp"
-
-
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="192dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="216dp"
                     android:background="#FFF"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -124,11 +116,11 @@
                     android:layout_height="154dp"
 
 
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="376dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
                     android:background="#FFF"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/v_ansioso" />
 
                 <View
                     android:id="@+id/v_diversion2"
@@ -136,11 +128,12 @@
                     android:layout_height="154dp"
 
 
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="380dp"
+                    android:layout_marginTop="44dp"
                     android:background="#FFF"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.418"
+                    app:layout_constraintStart_toEndOf="@+id/v_diversion"
+                    app:layout_constraintTop_toBottomOf="@+id/v_valentia" />
 
                 <View
                     android:id="@+id/v_valentia"
@@ -148,27 +141,14 @@
                     android:layout_height="154dp"
 
 
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="196dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="44dp"
                     android:background="#FFF"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/v_ansioso"
+                    app:layout_constraintTop_toBottomOf="@+id/v_alegre10" />
 
                 <TextView
                     android:id="@+id/tv_escuchar_musica"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-
-                    android:gravity="center"
-                    android:text="Alegre"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
-                    app:layout_constraintStart_toStartOf="@+id/v_alegre"
-                    app:layout_constraintTop_toTopOf="@+id/v_alegre" />
-
-                <TextView
-                    android:id="@+id/tv_escuchar_musica3"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
 
@@ -192,22 +172,8 @@
                     android:textSize="25dp"
                     app:layout_constraintBottom_toBottomOf="@+id/v_alegre"
                     app:layout_constraintEnd_toEndOf="@+id/v_alegre"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.285"
                     app:layout_constraintStart_toStartOf="@+id/v_alegre" />
-
-                <TextView
-                    android:id="@+id/tv_triste"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-
-                    android:gravity="center"
-                    android:text="Alegre"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
-                    app:layout_constraintStart_toStartOf="@+id/v_alegre"
-                    app:layout_constraintTop_toTopOf="@+id/v_alegre" />
-
 
                 <TextView
                     android:id="@+id/tv_tx0"
@@ -218,8 +184,10 @@
                     android:text="Alegre"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="220dp"
-                    tools:layout_editor_absoluteY="5dp" />
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre10"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre10"
+                    app:layout_constraintTop_toTopOf="@+id/v_alegre10"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_tx2"
@@ -230,8 +198,10 @@
                     android:text="Ansioso"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="34dp"
-                    tools:layout_editor_absoluteY="396dp" />
+                    app:layout_constraintEnd_toEndOf="@+id/v_diversion"
+                    app:layout_constraintStart_toStartOf="@+id/v_diversion"
+                    app:layout_constraintTop_toTopOf="@+id/v_diversion"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_tx3"
@@ -242,20 +212,26 @@
                     android:text="Molesto"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="235dp"
-                    tools:layout_editor_absoluteY="204dp" />
+                    app:layout_constraintEnd_toEndOf="@+id/v_valentia"
+                    app:layout_constraintStart_toStartOf="@+id/v_valentia"
+                    app:layout_constraintTop_toTopOf="@+id/v_valentia"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_tx4"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
 
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:text="Valiente"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="24dp"
-                    tools:layout_editor_absoluteY="212dp" />
+                    app:layout_constraintEnd_toEndOf="@+id/v_ansioso"
+                    app:layout_constraintHorizontal_bias="0.714"
+                    app:layout_constraintStart_toStartOf="@+id/v_ansioso"
+                    app:layout_constraintTop_toTopOf="@+id/v_ansioso"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_tx5"
@@ -266,8 +242,10 @@
                     android:text="Disgusto"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="234dp"
-                    tools:layout_editor_absoluteY="382dp" />
+                    app:layout_constraintEnd_toEndOf="@+id/v_diversion2"
+                    app:layout_constraintStart_toStartOf="@+id/v_diversion2"
+                    app:layout_constraintTop_toTopOf="@+id/v_diversion2"
+                    tools:ignore="MissingConstraints" />
 
 
                 <TextView
@@ -279,8 +257,10 @@
                     android:text="50%"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="234dp"
-                    tools:layout_editor_absoluteY="124dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/v_alegre10"
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre10"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre10"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_indice3"
@@ -291,8 +271,10 @@
                     android:text="50%"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="27dp"
-                    tools:layout_editor_absoluteY="308dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/v_ansioso"
+                    app:layout_constraintEnd_toEndOf="@+id/v_ansioso"
+                    app:layout_constraintStart_toStartOf="@+id/v_ansioso"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_indice4"
@@ -303,8 +285,10 @@
                     android:text="50%"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="220dp"
-                    tools:layout_editor_absoluteY="492dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/v_diversion2"
+                    app:layout_constraintEnd_toEndOf="@+id/v_diversion2"
+                    app:layout_constraintStart_toStartOf="@+id/v_diversion2"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_indice5"
@@ -315,8 +299,10 @@
                     android:text="50%"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="234dp"
-                    tools:layout_editor_absoluteY="308dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/v_valentia"
+                    app:layout_constraintEnd_toEndOf="@+id/v_valentia"
+                    app:layout_constraintStart_toStartOf="@+id/v_valentia"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_indice6"
@@ -327,8 +313,10 @@
                     android:text="50%"
                     android:textColor="#000000"
                     android:textSize="25dp"
-                    tools:layout_editor_absoluteX="27dp"
-                    tools:layout_editor_absoluteY="488dp" />
+                    app:layout_constraintBottom_toBottomOf="@+id/v_diversion"
+                    app:layout_constraintEnd_toEndOf="@+id/v_diversion"
+                    app:layout_constraintStart_toStartOf="@+id/v_diversion"
+                    tools:ignore="MissingConstraints" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -337,4 +325,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
