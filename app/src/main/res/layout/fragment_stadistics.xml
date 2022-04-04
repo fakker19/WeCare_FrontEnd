@@ -3,32 +3,337 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAF3DD"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".StadisticsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FAF3DD"
         android:orientation="vertical"
-        android:layout_marginTop="15dp"
-        >
+        tools:context=".RegisterEventActivity">
 
-        <com.androidplot.xy.XYPlot
-            android:id="@+id/feeling_today_plot"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="620dp"
-            app:domainTitle="Horas"
-            style="@style/APDefacto.Light"
-            app:rangeTitle="Emociones"
-            app:title="Sentimientos de Hoy"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_fav" />
+                </LinearLayout>
 
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="ESTADISTICAS"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                >
+
+
+                <View
+                    android:id="@+id/v_alegre"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+                    android:layout_marginLeft="20dp"
+
+
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/v_alegre10"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_ansioso"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="192dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_asco"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="192dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_diversion"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="376dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_diversion2"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="380dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_valentia"
+                    android:layout_width="174dp"
+                    android:layout_height="154dp"
+
+
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="196dp"
+                    android:background="#FFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_escuchar_musica"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Alegre"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre"
+                    app:layout_constraintTop_toTopOf="@+id/v_alegre" />
+
+                <TextView
+                    android:id="@+id/tv_escuchar_musica3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Alegre"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre"
+                    app:layout_constraintTop_toTopOf="@+id/v_alegre" />
+
+
+                <TextView
+                    android:id="@+id/tv_indice_alegre"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/v_alegre"
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre" />
+
+                <TextView
+                    android:id="@+id/tv_triste"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Alegre"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/v_alegre"
+                    app:layout_constraintStart_toStartOf="@+id/v_alegre"
+                    app:layout_constraintTop_toTopOf="@+id/v_alegre" />
+
+
+                <TextView
+                    android:id="@+id/tv_tx0"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Alegre"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="220dp"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_tx2"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Ansioso"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="34dp"
+                    tools:layout_editor_absoluteY="396dp" />
+
+                <TextView
+                    android:id="@+id/tv_tx3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Molesto"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="235dp"
+                    tools:layout_editor_absoluteY="204dp" />
+
+                <TextView
+                    android:id="@+id/tv_tx4"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Valiente"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="24dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:id="@+id/tv_tx5"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Disgusto"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="234dp"
+                    tools:layout_editor_absoluteY="382dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_indice2"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="234dp"
+                    tools:layout_editor_absoluteY="124dp" />
+
+                <TextView
+                    android:id="@+id/tv_indice3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="308dp" />
+
+                <TextView
+                    android:id="@+id/tv_indice4"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="220dp"
+                    tools:layout_editor_absoluteY="492dp" />
+
+                <TextView
+                    android:id="@+id/tv_indice5"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="234dp"
+                    tools:layout_editor_absoluteY="308dp" />
+
+                <TextView
+                    android:id="@+id/tv_indice6"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="488dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
 

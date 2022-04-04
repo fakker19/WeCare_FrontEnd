@@ -123,15 +123,6 @@ class StadisticsFragment : Fragment(){
             CatmullRomInterpolator.Params(100,
                 CatmullRomInterpolator.Type.Uniform))
 
-        var feeling_today_plot= view?.findViewById<XYPlot>(R.id.feeling_today_plot)
-
-        feeling_today_plot?.addSeries(series1,series1Format)
-
-
-
-        if (feeling_today_plot != null) {
-            PanZoom.attach(feeling_today_plot)
-        }
     }
 
 

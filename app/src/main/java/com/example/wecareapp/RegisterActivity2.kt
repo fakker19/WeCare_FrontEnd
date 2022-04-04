@@ -34,29 +34,38 @@ class RegisterActivity2 : AppCompatActivity() {
         registro.setOnClickListener(){
             if(TextUtils.isEmpty(Firstname.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(Lastname.text.toString())){
+            }
+            else{
+                createSpecialist()
+            }
+            if(TextUtils.isEmpty(Lastname.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(Email.text.toString())){
+            } else{
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(Password.text.toString()))
+            }
+            if (TextUtils.isEmpty(Password.text.toString()))
             {
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if(TextUtils.isEmpty(ConfirmPassword.text.toString()))
-            {
+            }
+            if(TextUtils.isEmpty(ConfirmPassword.text.toString())) {
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
-            else if(TextUtils.isEmpty(Esp.text.toString())){
+            else{
+                createSpecialist()
+            }
+            if(TextUtils.isEmpty(Nrocol.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
-            else if(TextUtils.isEmpty(Nrocol.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            else{
+                createSpecialist()
             }
-            else if(Password!=ConfirmPassword){
+            if(Password!=ConfirmPassword){
                 Toast.makeText(this,"Contraseña debe ser igual", Toast.LENGTH_SHORT).show()
             }
             else{
                 createSpecialist()
             }
+
             val intent = Intent(this, SelectorActivity::class.java).apply {
                 //putExtra("Username",user.name)
             }

@@ -5,7 +5,7 @@ data class User (
     val Password: String,
 )
 data class UserResponse(
-    val nameid: String,
+    val name: String,
     val email: String,
     val unique_name:String,
     val family_name: String,

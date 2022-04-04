@@ -43,23 +43,44 @@ class RegisterActivity1 : AppCompatActivity() {
         registro.setOnClickListener(){
             if(TextUtils.isEmpty(tv_name.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(tv_lastname.text.toString())){
+            }
+            else{
+                createPatient()
+            }
+            if (TextUtils.isEmpty(tv_lastname.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(tv_mail.text.toString())){
+            }
+            else{
+                createPatient()
+            }
+            if (TextUtils.isEmpty(tv_mail.text.toString())){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if (TextUtils.isEmpty(tv_password.text.toString()))
-            {
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else if(TextUtils.isEmpty(tv_confirm_Password.text.toString()))
+            }
+            else{
+                createPatient()
+            }
+
+            if (TextUtils.isEmpty(tv_password.text.toString()))
             {
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
-            else if(tv_password!=tv_confirm_Password){
+            else{
+                createPatient()
+            }
+            if(TextUtils.isEmpty(tv_confirm_Password.text.toString()))
+            {
+                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                createPatient()
+            }
+            if(tv_password!=tv_confirm_Password){
                 Toast.makeText(this,"Contraseña debe ser igual", Toast.LENGTH_SHORT).show()
             }
             else{
                 createPatient()
             }
+
             val intent = Intent(this, SelectorActivity::class.java).apply {
                 //putExtra("Username",user.name)
             }
