@@ -61,13 +61,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewModel() {
-        vm = ViewModelProvider(this).get(GetEventsVM::class.java)
-        vm.getUserListObserverable().observe(this, Observer <UserList?>{
+        viewModel = ViewModelProvider(this).get(CreateLogUserVM::class.java)
+        viewModel.getCreateNewUserObserver().observe(this, Observer <UserResponse?>{
 
             if(it  == null) {
                 Toast.makeText(this, "Failed to create User", Toast.LENGTH_LONG).show()
             } else {
-                recyclerViewAdapter.userList = it.data.toMutableList()
+                //{"code":201,"meta":null,"data":{"id":2877,"name":"xxxxxaaaaabbbbb","email":"xxxxxaaaaabbbbb@gmail.com","gender":"male","status":"active"}}
                 Toast.makeText(this, "Successfully created User", Toast.LENGTH_LONG).show()
             }
         })

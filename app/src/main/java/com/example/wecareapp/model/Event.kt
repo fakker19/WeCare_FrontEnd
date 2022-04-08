@@ -11,7 +11,7 @@ data class Event (
 )
 data class EventResponse (
     val eventId:Int
-    )
+)
 
 data class EventGet (
 

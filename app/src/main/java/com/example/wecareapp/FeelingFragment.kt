@@ -86,7 +86,3 @@ class FeelingFragment : Fragment(){
 
 
 }
-
-fun <T> MutableLiveData<T>.observe(viewLifecycleOwner: LifecycleOwner, observer: Observer<List<EventGet>?>) {
-
-}

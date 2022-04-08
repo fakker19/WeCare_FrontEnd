@@ -14,7 +14,3 @@ data class UserResponse(
     val exp: Int,
     val iat: Int
 )
-
-data class UserList(
-    val data: List<User>
-)

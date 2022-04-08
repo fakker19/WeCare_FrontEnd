@@ -81,7 +81,7 @@ class RegisterActivity2 : AppCompatActivity() {
         val ConfirmPassword=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password).text.toString().replace(" ","")
         val Esp=findViewById<AutoCompleteTextView>(R.id.tv_especialidad).text.toString().replace(" ","")
         val Nrocol=findViewById<AutoCompleteTextView>(R.id.tv_nro_colegiatura).text.toString().replace(" ","")
-        val patient  = Specialist(Firstname, Lastname, Email, Esp,Nrocol,Password,ConfirmPassword)
+        val  specialist = Specialist(Firstname, Lastname, Email, Esp,Nrocol,Password,ConfirmPassword)
 
         //var retorno = true
 
@@ -91,7 +91,7 @@ class RegisterActivity2 : AppCompatActivity() {
             Toast.LENGTH_SHORT).show()
             retorno = false
         }*/
-        viewModel.createNewSpecialist(patient)
+        viewModel.createNewSpecialist(specialist)
         //return retorno;
 
     }

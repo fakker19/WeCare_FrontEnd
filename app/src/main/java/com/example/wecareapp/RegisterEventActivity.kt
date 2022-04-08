@@ -58,24 +58,12 @@ class RegisterEventActivity : AppCompatActivity() {
 
 
         ib_sendevent.setOnClickListener{
-            if(TextUtils.isEmpty(et_event.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
+          //  if(TextUtils.isEmpty(et_event.text.toString()) && TextUtils.isEmpty(et_reason.text.toString()) && TextUtils.isEmpty(tv_details.text.toString())){
+              //  Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+           // }
+           // else{
                 createEvent(this, feelingNum, result,)
-            }
-            if(TextUtils.isEmpty(et_reason.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createEvent(this, feelingNum, result,)
-            }
-            if(TextUtils.isEmpty(tv_details.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createEvent(this, feelingNum, result,)
-            }
+          //  }
         }
 
 /*

@@ -27,17 +27,18 @@ class RegisterActivity1 : AppCompatActivity() {
     lateinit var viewModel: CreatePatientVM
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_register1)
 
         var myResponse: MutableLiveData<Response<Patient>> = MutableLiveData()
         setContentView(R.layout.activity_register1)
         //    val policy = ThreadPolicy.Builder().permitAll().build()
         //      StrictMode.setThreadPolicy(policy)
         val registro=findViewById<Button>(R.id.bt_crearC1)
-        var tv_name=findViewById<AutoCompleteTextView>(R.id.tv_nombre)
-        var tv_lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido)
-        var tv_mail=findViewById<AutoCompleteTextView>(R.id.tv_correo)
-        var tv_password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña)
-        var tv_confirm_Password=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password)
+        val tv_name=findViewById<AutoCompleteTextView>(R.id.tv_nombre)
+        val tv_lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido)
+        val tv_mail=findViewById<AutoCompleteTextView>(R.id.tv_correo)
+        val tv_password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña)
+        val tv_confirm_Password=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password)
 
         initViewModel()
         registro.setOnClickListener(){
@@ -89,11 +90,11 @@ class RegisterActivity1 : AppCompatActivity() {
     }
 
     private fun createPatient() {
-        val Firstname=findViewById<AutoCompleteTextView>(R.id.tv_nombre).text.toString().replace(" ","")
-        val Lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido).text.toString().replace(" ","")
-        val Email=findViewById<AutoCompleteTextView>(R.id.tv_correo).text.toString().replace(" ","")
-        val Password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña).text.toString().replace(" ","")
-        val ConfirPassowrd=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password).text.toString().replace(" ","")
+        val Firstname=findViewById<AutoCompleteTextView>(R.id.tv_nombre).text.toString()
+        val Lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido).text.toString()
+        val Email=findViewById<AutoCompleteTextView>(R.id.tv_correo).text.toString()
+        val Password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña).text.toString()
+        val ConfirPassowrd=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password).text.toString()
 
         val patient  = Patient(Firstname, Lastname, Email, Password, ConfirPassowrd)
         viewModel.createNewPatient(patient)

@@ -150,8 +150,8 @@
                     android:id="@+id/tv_especialidad"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Nro. de Colegiatura"
-                    android:textSize="16dp"></AutoCompleteTextView>
+                    android:hint="@string/nro_de_colegiatura"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -173,9 +173,9 @@
                     android:id="@+id/tv_nro_colegiatura"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Contraseña"
+                    android:hint="@string/contrase_a"
                     android:inputType="textPassword"
-                    android:textSize="16dp"></AutoCompleteTextView>
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -197,9 +197,9 @@
                     android:id="@+id/tv_confirm_password"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Confirmar Contraseña"
+                    android:hint="@string/confirmar_contrase_a"
                     android:inputType="textPassword"
-                    android:textSize="16dp"></AutoCompleteTextView>
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -218,8 +218,8 @@
                     android:id="@+id/tv_nombre1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Nombres"
-                    android:textSize="16dp" />
+                    android:hint="@string/nombres"
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -239,8 +239,8 @@
                     android:id="@+id/tv_contraseña1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Especialidad"
-                    android:textSize="16dp"></AutoCompleteTextView>
+                    android:hint="@string/especialidad"
+                    android:textSize="16sp" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -263,9 +263,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/loginbutton"
-                android:text="Crear"
+                android:text="@string/crear"
                 android:textColor="#000"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:backgroundTint="#FFA69E" />
 
 

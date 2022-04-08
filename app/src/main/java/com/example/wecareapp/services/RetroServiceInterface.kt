@@ -30,16 +30,7 @@ interface RetroServiceInterface {
     fun createEvent(@Body params: Event): Call<EventResponse>
 
     @GET("events/today/{user_id}")
-    @Headers(   "Accept:application/json", "Content-Type:application/json"/*,
+    @Headers("Accept:application/json", "Content-Type:application/json"/*,
         "Authorization: Bearer 73668350bdf06c66f3388408c1a712b378c3e25da599753b21b664a6261e246c"*/)
-    fun getEventList (): Call<List<EventGet>>
-
-    @GET("users")
-    @Headers(   "Accept:application/json", "Content-Type:application/json",
-        "Authorization: Bearer 73668350bdf06c66f3388408c1a712b378c3e25da599753b21b664a6261e246c")
-    fun getUsersList(): Call<UserList> //getuserslist
-
-    @GET("users")
-    @Headers(   "Accept:application/json", "Content-Type:application/json")
-    fun searchUsers(@Query("name") searchText: String): Call<UserList>
+    fun getEventList (@Path("user_id") user_id:String): Call<List<EventGet>>
 }
