@@ -15,7 +15,6 @@ import com.demo.retrofitwithpost.GetEventsVM
 import com.example.wecareapp.model.EventGet
 import com.example.wecareapp.recyclerview.RecyclerViewAdapter
 
-
 class FeelingFragment : Fragment(){
 
     // TODO: Rename and change types of parameters

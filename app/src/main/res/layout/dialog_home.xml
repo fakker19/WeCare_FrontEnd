@@ -26,14 +26,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="205dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#636363"
             android:text="NO" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="205dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#CF6B6B"
             android:text="SI" />
