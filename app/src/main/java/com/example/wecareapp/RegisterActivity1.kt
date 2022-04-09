@@ -34,58 +34,37 @@ class RegisterActivity1 : AppCompatActivity() {
         //    val policy = ThreadPolicy.Builder().permitAll().build()
         //      StrictMode.setThreadPolicy(policy)
         val registro=findViewById<Button>(R.id.bt_crearC1)
-        val tv_name=findViewById<AutoCompleteTextView>(R.id.tv_nombre)
-        val tv_lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido)
-        val tv_mail=findViewById<AutoCompleteTextView>(R.id.tv_correo)
-        val tv_password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña)
-        val tv_confirm_Password=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password)
+        val tv_name=findViewById<EditText>(R.id.tv_nombre)
+        val tv_lastname=findViewById<EditText>(R.id.tv_apellido)
+        val tv_mail=findViewById<EditText>(R.id.tv_correo)
+        val tv_password=findViewById<EditText>(R.id.tv_contraseña)
+        val tv_confirm_Password=findViewById<EditText>(R.id.tv_confirm_password)
 
         initViewModel()
         registro.setOnClickListener(){
-            if(TextUtils.isEmpty(tv_name.text.toString())){
+            if(TextUtils.isEmpty(tv_name.text.toString()) &&
+                TextUtils.isEmpty(tv_lastname.text.toString()) &&
+                TextUtils.isEmpty(tv_mail.text.toString()) &&
+                TextUtils.isEmpty(tv_password.text.toString()) &&
+                TextUtils.isEmpty(tv_confirm_Password.text.toString())
+            ){
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
-            else{
-                createPatient()
-            }
-            if (TextUtils.isEmpty(tv_lastname.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createPatient()
-            }
-            if (TextUtils.isEmpty(tv_mail.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createPatient()
-            }
-
-            if (TextUtils.isEmpty(tv_password.text.toString()))
-            {
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createPatient()
-            }
-            if(TextUtils.isEmpty(tv_confirm_Password.text.toString()))
-            {
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createPatient()
-            }
-            if(tv_password!=tv_confirm_Password){
+            else if( TextUtils.isEmpty(tv_password.text.toString()) != TextUtils.isEmpty(tv_confirm_Password.text.toString())){
                 Toast.makeText(this,"Contraseña debe ser igual", Toast.LENGTH_SHORT).show()
             }
             else{
                 createPatient()
+                val intent = Intent(this, SelectorActivity::class.java).apply {
+                    //putExtra("Username",user.name)
+                }
+                startActivity(intent)
             }
+
 
             val intent = Intent(this, SelectorActivity::class.java).apply {
                 //putExtra("Username",user.name)
             }
-            startActivity(intent)
         }
     }
 

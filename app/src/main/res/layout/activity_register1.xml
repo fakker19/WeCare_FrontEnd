@@ -102,7 +102,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.375">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_apellido"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -124,12 +124,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.566">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_correo"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
                     android:hint="@string/correo"
-                    android:text=""
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,13 +146,13 @@
                 app:passwordToggleEnabled="true"
                 app:layout_constraintVertical_bias="0.925">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_contraseña_confirmar"
                     android:layout_width="278dp"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:inputType="textPassword"
                     android:layout_height="51dp"
-                    android:hint="Confirmar Contraseña" />
+                    android:hint="@string/confirmar_contrase_a" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,13 +170,13 @@
                 app:passwordToggleEnabled="true"
                 app:layout_constraintVertical_bias="0.746">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_contraseña"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Contraseña"
+                    android:hint="@string/contrase_a"
                     android:inputType="textPassword"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,13 +193,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.198">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_nombre"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
-                    android:hint="Nombres"
+                    android:hint="@string/nombres"
                     android:text=""
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@ class RegisterEventActivity : AppCompatActivity() {
         val feelingM = findViewById<SeekBar>(R.id.feelingM)
         val et_event = findViewById<EditText>(R.id.eT_Event)
         val et_reason = findViewById<EditText>(R.id.eT_reasonevent)
-        val tv_details = findViewById<AutoCompleteTextView>(R.id.tv_detail_event)
+        val tv_details = findViewById<EditText>(R.id.tv_detail_event)
         val ib_tup = findViewById<ImageButton>(R.id.ib_tup)
         val ib_tdown = findViewById<ImageButton>(R.id.ib_tdown)
         val feeling_numberM = findViewById<TextView>(R.id.feeling_numberM)
@@ -58,12 +58,12 @@ class RegisterEventActivity : AppCompatActivity() {
 
 
         ib_sendevent.setOnClickListener{
-          //  if(TextUtils.isEmpty(et_event.text.toString()) && TextUtils.isEmpty(et_reason.text.toString()) && TextUtils.isEmpty(tv_details.text.toString())){
-              //  Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-           // }
-           // else{
+            if(TextUtils.isEmpty(et_event.text.toString()) && TextUtils.isEmpty(et_reason.text.toString()) && TextUtils.isEmpty(tv_details.text.toString()) ){
+                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
+            }
+            else{
                 createEvent(this, feelingNum, result,)
-          //  }
+            }
         }
 
 /*

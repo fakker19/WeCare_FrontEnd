@@ -8,6 +8,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.Toast
 import android.view.View
+import android.widget.EditText
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.wecareapp.model.Specialist
@@ -21,78 +22,52 @@ class RegisterActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_register2)
 
         val registro=findViewById<Button>(R.id.bt_crearC2)
-        val Firstname=findViewById<AutoCompleteTextView>(R.id.tv_nombre1)
-        val Lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido1)
-        val Email=findViewById<AutoCompleteTextView>(R.id.tv_correo1)
-        val Password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña1)
-        val ConfirmPassword=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password)
-        val Esp=findViewById<AutoCompleteTextView>(R.id.tv_especialidad)
-        val Nrocol=findViewById<AutoCompleteTextView>(R.id.tv_nro_colegiatura)
+        val Firstname=findViewById<EditText>(R.id.tv_nombre1)
+        val Lastname=findViewById<EditText>(R.id.tv_apellido1)
+        val Email=findViewById<EditText>(R.id.tv_correo1)
+        val Password=findViewById<EditText>(R.id.tv_contraseña1)
+        val ConfirmPassword=findViewById<EditText>(R.id.tv_confirm_password)
+        val Esp=findViewById<EditText>(R.id.tv_especialidad)
+        val Nrocol=findViewById<EditText>(R.id.tv_nro_colegiatura)
 
         //  RegisterService.enviarWs(nombres,apellidos,correo,contrasena,esp,nrocol);
         initViewModel()
         registro.setOnClickListener(){
-            if(TextUtils.isEmpty(Firstname.text.toString())){
+            if(TextUtils.isEmpty(Firstname.text.toString()) &&
+                TextUtils.isEmpty(Lastname.text.toString()) &&
+                TextUtils.isEmpty(Email.text.toString()) &&
+                TextUtils.isEmpty(Password.text.toString())  &&
+                TextUtils.isEmpty(ConfirmPassword.text.toString()) &&
+                TextUtils.isEmpty(Esp.text.toString()) &&
+                TextUtils.isEmpty(Nrocol.text.toString())
+                )
+                {
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
-            else{
-                createSpecialist()
-            }
-            if(TextUtils.isEmpty(Lastname.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            } else{
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            if (TextUtils.isEmpty(Password.text.toString()))
-            {
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            if(TextUtils.isEmpty(ConfirmPassword.text.toString())) {
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createSpecialist()
-            }
-            if(TextUtils.isEmpty(Nrocol.text.toString())){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createSpecialist()
-            }
-            if(Password!=ConfirmPassword){
+            else if (TextUtils.isEmpty(Password.text.toString()) != TextUtils.isEmpty(ConfirmPassword.text.toString())){
                 Toast.makeText(this,"Contraseña debe ser igual", Toast.LENGTH_SHORT).show()
             }
             else{
                 createSpecialist()
+                val intent = Intent(this, SelectorActivity::class.java).apply {
+                    //putExtra("Username",user.name)
+                }
+                startActivity(intent)
             }
-
-            val intent = Intent(this, SelectorActivity::class.java).apply {
-                //putExtra("Username",user.name)
-            }
-            startActivity(intent)
         }
     }
     private fun createSpecialist(){
 
-        val Firstname=findViewById<AutoCompleteTextView>(R.id.tv_nombre1).text.toString().replace(" ","")
-        val Lastname=findViewById<AutoCompleteTextView>(R.id.tv_apellido1).text.toString().replace(" ","")
-        val Email=findViewById<AutoCompleteTextView>(R.id.tv_correo1).text.toString().replace(" ","")
-        val Password=findViewById<AutoCompleteTextView>(R.id.tv_contraseña1).text.toString().replace(" ","")
-        val ConfirmPassword=findViewById<AutoCompleteTextView>(R.id.tv_confirm_password).text.toString().replace(" ","")
-        val Esp=findViewById<AutoCompleteTextView>(R.id.tv_especialidad).text.toString().replace(" ","")
-        val Nrocol=findViewById<AutoCompleteTextView>(R.id.tv_nro_colegiatura).text.toString().replace(" ","")
+        val Firstname=findViewById<EditText>(R.id.tv_nombre1).text.toString()
+        val Lastname=findViewById<EditText>(R.id.tv_apellido1).text.toString()
+        val Email=findViewById<EditText>(R.id.tv_correo1).text.toString()
+        val Password=findViewById<EditText>(R.id.tv_contraseña1).text.toString()
+        val ConfirmPassword=findViewById<EditText>(R.id.tv_confirm_password).text.toString()
+        val Esp=findViewById<EditText>(R.id.tv_especialidad).text.toString()
+        val Nrocol=findViewById<EditText>(R.id.tv_nro_colegiatura).text.toString()
         val  specialist = Specialist(Firstname, Lastname, Email, Esp,Nrocol,Password,ConfirmPassword)
 
-        //var retorno = true
-
-        /*if (Firstname.isEmpty()){
-            Toast.makeText(this,
-            "Coloque sus nombres en el campo",
-            Toast.LENGTH_SHORT).show()
-            retorno = false
-        }*/
         viewModel.createNewSpecialist(specialist)
-        //return retorno;
 
     }
 

@@ -103,7 +103,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.263">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_apellido1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -124,7 +124,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.402">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_correo1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -146,7 +146,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.688">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_especialidad"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -169,7 +169,7 @@
                 app:passwordToggleEnabled="true"
                 app:layout_constraintVertical_bias="0.827">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_nro_colegiatura"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -193,7 +193,7 @@
                 app:passwordToggleEnabled="true"
                 app:layout_constraintVertical_bias="0.967">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_confirm_password"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -214,7 +214,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.121">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_nombre1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
@@ -235,7 +235,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.54">
 
-                <AutoCompleteTextView
+                <EditText
                     android:id="@+id/tv_contraseña1"
                     android:layout_width="278dp"
                     android:layout_height="51dp"
