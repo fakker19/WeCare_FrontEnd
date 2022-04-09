@@ -64,14 +64,10 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:src="@drawable/ic_fav"
-                app:srcCompat="@drawable/ic_fav240"
-                app:tint="#DA8989" />
+                android:src="@drawable/ic_fav240"
+                android:tint="#DA8989" />
 
             <TextView
                 android:id="@+id/textView12"
