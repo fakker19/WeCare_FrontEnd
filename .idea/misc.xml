@@ -3,47 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/drawable-v24/color.xml" value="0.1315" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/drawable-v24/ic_fav240.xml" value="0.1315" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/drawable/ic_fav.xml" value="0.1" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_button_breath.xml" value="0.33" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_launch.xml" value="0.1" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_media_player.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_mi_esp.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_perfil.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_register1.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_register2.xml" value="0.22" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_register_event.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_relax_selector.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_select_rol.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/activity_selector.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/dialog_home.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/fragment_feeling2.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/fragment_stadistics.xml" value="0.17375886524822695" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/fragment_stats.xml" value="0.25" />
-        <entry key="..\:/Taller de Desempeño Profesional/WeCare_FrontEnd/app/src/main/res/layout/lista_item.xml" value="0.17375886524822695" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_button_breath.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/drawable/ic_fav240.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_button_breath.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_launch.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.1933876811594203" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_media_player.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_mi_esp.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_perfil.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_perfil.xml" value="0.16423357664233576" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_register1.xml" value="0.161231884057971" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_register2.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_register_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_register2.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_register_event.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_relax_selector.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_select_rol.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_selector.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_selector.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/activity_selector2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/dialog_home.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_feeling2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_home.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_feeling2.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_home.xml" value="0.10185185185185185" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_stadistics.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_stats.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/fragment_stats.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/lista_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/recycler_row_event.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/menu/menu_item_selector.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/menu/menu_options.xml" value="0.264" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/WeCare_FrontEnd/app/src/main/res/menu/menu_options2.xml" value="0.264" />
       </map>
     </option>
   </component>

@@ -40,8 +40,8 @@ class RegisterActivity2 : AppCompatActivity() {
                 TextUtils.isEmpty(ConfirmPassword.text.toString()) &&
                 TextUtils.isEmpty(Esp.text.toString()) &&
                 TextUtils.isEmpty(Nrocol.text.toString())
-                )
-                {
+            )
+            {
                 Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
             }
             else if (TextUtils.isEmpty(Password.text.toString()) != TextUtils.isEmpty(ConfirmPassword.text.toString())){

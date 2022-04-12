@@ -1,12 +1,19 @@
 package com.example.wecareapp
 
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 
 class ButtonBreathActivity : AppCompatActivity() {
     var isOn=true
@@ -15,7 +22,6 @@ class ButtonBreathActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_button_breath)
-
         val breath=findViewById<ImageButton>(R.id.bt_breath)
         var tv_timer=findViewById<TextView>(R.id.tv_timer)
 

@@ -3,7 +3,6 @@ package com.example.wecareapp
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -19,6 +18,7 @@ import java.util.*
 
 class RegisterEventActivity : AppCompatActivity() {
     lateinit var viewModel: CreateEventVM
+
     @RequiresApi(Build.VERSION_CODES.O)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +31,15 @@ class RegisterEventActivity : AppCompatActivity() {
         var feelingNum: Float = 0.0F
 
 
-        val feelingM = findViewById<SeekBar>(R.id.feelingM)
-        val et_event = findViewById<EditText>(R.id.eT_Event)
-        val et_reason = findViewById<EditText>(R.id.eT_reasonevent)
-        val tv_details = findViewById<EditText>(R.id.tv_detail_event)
-        val ib_tup = findViewById<ImageButton>(R.id.ib_tup)
-        val ib_tdown = findViewById<ImageButton>(R.id.ib_tdown)
-        val feeling_numberM = findViewById<TextView>(R.id.feeling_numberM)
+        var feelingM = findViewById<SeekBar>(R.id.feelingM)
 
-        val tv_time_hour = findViewById<TextClock>(R.id.tv_time_hour)
-        val tv_date = findViewById<TextView>(R.id.tv_date)
+        var ib_tup = findViewById<ImageButton>(R.id.ib_tup)
+        var ib_tdown = findViewById<ImageButton>(R.id.ib_tdown)
+        var feeling_numberM = findViewById<TextView>(R.id.feeling_numberM)
 
-        val ib_sendevent=findViewById<ImageButton>(R.id.ib_sendevent)
+        var tv_time_hour = findViewById<TextClock>(R.id.tv_time_hour)
+        var tv_date = findViewById<TextView>(R.id.tv_date)
+        var ib_sendevent=findViewById<ImageButton>(R.id.ib_sendevent)
 
 
         val fieldUS: TemporalField = WeekFields.of(Locale.US).dayOfWeek()
@@ -57,14 +54,9 @@ class RegisterEventActivity : AppCompatActivity() {
 
 
 
-        ib_sendevent.setOnClickListener{
-            if(TextUtils.isEmpty(et_event.text.toString()) && TextUtils.isEmpty(et_reason.text.toString()) && TextUtils.isEmpty(tv_details.text.toString()) ){
-                Toast.makeText(this,"Complete los datos", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                createEvent(this, feelingNum, result,)
-            }
-        }
+        ib_sendevent.setOnClickListener(View.OnClickListener {
+            createEvent(this, feelingNum, result,)
+        })
 
 /*
         "eventName": "string",
@@ -73,7 +65,6 @@ class RegisterEventActivity : AppCompatActivity() {
         "eventResult": "string",
         "eventDetail": "string",
         "patientId": 0
-
 */
 
 

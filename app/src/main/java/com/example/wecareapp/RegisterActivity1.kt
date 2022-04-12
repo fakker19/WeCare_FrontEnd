@@ -102,27 +102,21 @@ class RegisterActivity1 : AppCompatActivity() {
       Email: String,
       Password: String,
   ) {
-
       var reqParam = URLEncoder.encode("Firstname", "UTF-8") + "=" + URLEncoder.encode(Firstname, "UTF-8")
       reqParam += "&" + URLEncoder.encode("Lastname", "UTF-8") + "=" + URLEncoder.encode(Lastname, "UTF-8")
       reqParam += "&" + URLEncoder.encode("Email", "UTF-8") + "=" + URLEncoder.encode(Email, "UTF-8")
       reqParam += "&" + URLEncoder.encode("Password", "UTF-8") + "=" + URLEncoder.encode(Password, "UTF-8")
       val mURL = URL("http://localhost:43654/identity/register_patient")
-
       with(mURL.openConnection() as HttpURLConnection) {
           // optional default is GET
           requestMethod = "POST"
-
           val wr = OutputStreamWriter(getOutputStream());
           wr.write(reqParam);
           wr.flush();
-
           println("URL : $url")
           println("Response Code : $responseCode")
-
           BufferedReader(InputStreamReader(inputStream)).use {
               val response = StringBuffer()
-
               var inputLine = it.readLine()
               while (inputLine != null) {
                   response.append(inputLine)
@@ -132,7 +126,6 @@ class RegisterActivity1 : AppCompatActivity() {
           }
       }
   }*/
-
 
 
 
